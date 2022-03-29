@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+/*
+font-family: "Oswald", sans-serif;
+
+font-family: "Dela Gothic One", cursive;
+*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Hero "Showcase" */
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: .5s;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #83ffd6;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  transition: .5s;
+}
+
+.text h3:hover {
+  color: #00a2ff;
+  letter-spacing: 15px;
+}
+
+.text p {
+  font-size: 1em;
+  margin: 5px 0;
+  font-weight: 400;
+  max-width: 500px;
+  transition: .5s;
+  border: 2px solid #afffe423;
+  border-radius: 10px;
+}
+
+.text p:hover {
+  font-size: 1.1em;
+  border: 10px solid #afffe433;
+  border-radius: 10px;
+  color: #abf8df;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #283dff71;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-radius: 5em;
+  transition: .5s;
+  font-family: "Oswald", sans-serif;
+}
+
+.text a:hover {
+  color: #00012e;
+  letter-spacing: 10px;
+  font-family: "Dela Gothic One", cursive;
+}
+
+
+/* Overlay Background Video Efect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b0388;
+  mix-blend-mode: overlay;
+}
+
+/* Menu */
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 10px;
+  font-size: 2em;
+  background: url('img-vid/bcMenu.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: .4s;
+  text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+  letter-spacing: 15px;
+  background: #00c3ff71;
+  border-radius: 5em;
+  color: #0044ffd8;
+}
+
+/* Logo */
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Dela Gothic One", cursive;
+  color: #0066ffc5;
+  background: #000cb9a8;
+  border: 2px solid #00b8f06c;
+  border-radius: 100%;
+  transition: .5s;
+}
+
+.logo:hover {
+  color: #ffffff;
+  letter-spacing: 5px;
+  font-size: 150%;
+}
+
+/* Social */
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: brightness(1);
+  margin-right: 20px;
+  transform: scale(.9);
+  transition: .5s;
+}
+
+.social li a:hover {
+  transform: scale(.8) translateY(-15px);
+}
+
+.social img {
+  width: 30px;
+  border-radius: 100%;
+}
+
+.social li {
+  list-style: none;
+}
+
+
+/* Icon menu toggle active Img */
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url('img-vid/menu.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url('img-vid/close.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+}
+
+
+/* Video */
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MediaQuery */
+
+@media(max-width: 798px) {
+  .showcase, .showcase header {
+    padding: 15px;
+  }
+
+  .text h2 {
+    font-size: 3.5em;
+  }
+
+  .text h3 {
+    font-size: 2.5em;
+  }
+}
